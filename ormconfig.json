@@ -5,8 +5,12 @@
   "username": "docker",
   "password": "master",
   "database": "eganet",
-  "migrations": ["./dist/shared/infra/typeorm/migrations/*.ts"],
-  "entities": ["dist/modules/**/*.entity{.ts,.js}"],
+  "migrations": [
+    "./dist/shared/infra/typeorm/migrations/*.ts"
+  ],
+  "entities": [
+    "dist/modules/**/*.entity{.ts,.js}"
+  ],
   "synchronize": true,
   "autoLoadEntities": true,
   "cli": {

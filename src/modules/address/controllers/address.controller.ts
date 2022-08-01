@@ -1,14 +1,16 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { CreateAddressDto } from '../dto/create-address.dto';
+import { Address } from '../entities/address.entity';
 import { AddressService } from '../services/address.service';
 
 @Controller('address')
 export class AddressController {
-  constructor(private readonly addressService: AddressService) {}
+  constructor(private readonly addressService: AddressService) { }
 
   @Post()
-  create(@Body() createAddressDto: CreateAddressDto) {
-    return this.addressService.create(createAddressDto);
+  async create(@Body() data: CreateAddressDto): Promise<Address> {
+    const andressCreated = await this.addressService.create(data);
+    return andressCreated;
   }
 
   @Get()

@@ -1,10 +1,10 @@
 version: "3.3"
 
 services:
-  database: 
+  database:
     image: postgres
     container_name: database_eganet
-    ports: 
+    ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=docker
@@ -12,7 +12,7 @@ services:
       - POSTGRES_DB=eganet
     volumes:
       - pgdata:/data/postgres
-      
+
 volumes:
   pgdata:
     driver: local
