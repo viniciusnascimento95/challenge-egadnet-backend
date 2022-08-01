@@ -1,3 +1,56 @@
+## Tech Stack
+
+**Server:** Nest.js, PostgreSQL, Typeorm, Docker, Jest.js,
+
+## Installation
+
+Clone the project
+
+```bash
+  git clone https://github.com/viniciusnascimento95/challenge-egadnet-backend.git
+
+  cd challenge-egadnet-backend
+```
+
+Install dependencies NPM
+
+```bash
+  npm install
+```
+
+## Docker
+
+Start database PostgreSQL
+
+```bash
+  docker-compose up
+```
+
+Run migrations api backend
+
+```bash
+  npm run typeorm migration:run
+```
+
+Start backend
+
+```bash
+  npm run start:dev
+```
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+## API docs run in http://localhost:3333/api
+
+![Screenshot](./screenshot/1.doc.png)
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -51,9 +104,6 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
@@ -64,9 +114,10 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Authors
+
+[@viniciusnascimento95](https://www.github.com/viniciusnascimento95)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vin%C3%ADcius-nascimento-027507159/)
 
 ## License
 

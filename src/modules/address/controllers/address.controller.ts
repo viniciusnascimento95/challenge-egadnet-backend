@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { CreateAddressDto } from '../dto/create-address.dto';
 import { Address } from '../entities/address.entity';
+
 import { AddressService } from '../services/address.service';
 
 @Controller('address')
@@ -9,8 +10,8 @@ export class AddressController {
 
   @Post()
   async create(@Body() data: CreateAddressDto): Promise<Address> {
-    const andressCreated = await this.addressService.create(data);
-    return andressCreated;
+    const addressCreated = await this.addressService.create(data);
+    return addressCreated;
   }
 
   @Get()

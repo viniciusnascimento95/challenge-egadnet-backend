@@ -1,8 +1,8 @@
 {
-  "name": "backend-eganet",
+  "name": "backend",
   "version": "0.0.1",
-  "description": "Challenge for job backend developer",
-  "author": "Vinicius Nascimento",
+  "description": "",
+  "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

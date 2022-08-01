@@ -4,6 +4,7 @@ import { CreateAddressDto } from '../dto/create-address.dto';
 import { Address } from '../entities/address.entity';
 import { AddressRepository } from '../infra/typeorm/repositories/address.repository';
 import { IAddressRepository } from '../repositories/address.interface';
+
 import { getCep } from './api/viacep';
 
 @Injectable()
@@ -11,7 +12,7 @@ export class AddressService {
   constructor(
     @InjectRepository(AddressRepository)
     private readonly addressRepository: IAddressRepository,
-  ) {}
+  ) { }
 
   async create({ cep }: CreateAddressDto): Promise<Address> {
     const cepExists = await this.addressRepository.findByCep(cep);
@@ -24,8 +25,10 @@ export class AddressService {
         city: cepExists.city,
         uf: cepExists.uf,
       });
+
       return addressExists;
     }
+
     const searchCep = await getCep(cep);
 
     const address = await this.addressRepository.createAddress({
@@ -35,6 +38,7 @@ export class AddressService {
       city: searchCep.city,
       uf: searchCep.uf,
     });
+
     return address;
   }
 

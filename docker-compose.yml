@@ -3,13 +3,13 @@ version: "3.3"
 services:
   database:
     image: postgres
-    container_name: database_eganet
+    container_name: database_edanet
     ports:
       - 5432:5432
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=master
-      - POSTGRES_DB=eganet
+      - POSTGRES_DB=edanet
     volumes:
       - pgdata:/data/postgres
 
